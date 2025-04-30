@@ -211,17 +211,17 @@ export const FractionsLearningModule: React.FC<FractionsLearningModuleProps> = (
   onAnswerSubmit,
   currentQuestion,
   showingLesson,
-  currentLesson
+  currentLesson: providedLesson
 }) => {
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
   
-  const currentLesson = lessons[currentLessonIndex];
-  const currentStep = currentLesson.steps[currentStepIndex];
+  const activeLesson = lessons[currentLessonIndex];
+  const currentStep = activeLesson.steps[currentStepIndex];
   
   const handleNext = () => {
-    if (currentStepIndex < currentLesson.steps.length - 1) {
+    if (currentStepIndex < activeLesson.steps.length - 1) {
       setCurrentStepIndex(currentStepIndex + 1);
     } else if (currentLessonIndex < lessons.length - 1) {
       setCurrentLessonIndex(currentLessonIndex + 1);
@@ -242,7 +242,7 @@ export const FractionsLearningModule: React.FC<FractionsLearningModuleProps> = (
     // Auto-advance if not interactive
     if (currentStep.animation && !currentStep.animation.interactive) {
       setTimeout(() => {
-        if (currentStepIndex < currentLesson.steps.length - 1) {
+        if (currentStepIndex < activeLesson.steps.length - 1) {
           handleNext();
         }
       }, 2000);
@@ -251,19 +251,19 @@ export const FractionsLearningModule: React.FC<FractionsLearningModuleProps> = (
   
   const isPreviousDisabled = currentLessonIndex === 0 && currentStepIndex === 0;
   const isNextDisabled = currentLessonIndex === lessons.length - 1 && 
-                       currentStepIndex === currentLesson.steps.length - 1;
+                       currentStepIndex === activeLesson.steps.length - 1;
 
   return (
     <div className="fractions-learning-module max-w-5xl mx-auto p-6">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center text-indigo-700 mb-2">
-          {currentLesson.title}
+          {activeLesson.title}
         </h1>
         <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
           <div 
             className="bg-indigo-500 h-full transition-all duration-300 ease-in-out"
             style={{ 
-              width: `${(currentStepIndex / (currentLesson.steps.length - 1)) * 100}%` 
+              width: `${(currentStepIndex / (activeLesson.steps.length - 1)) * 100}%` 
             }}
           />
         </div>
@@ -288,7 +288,7 @@ export const FractionsLearningModule: React.FC<FractionsLearningModuleProps> = (
                 animate={{ opacity: 1 }}
                 className="text-3xl text-indigo-700 font-bold text-center"
               >
-                {currentLesson.title}
+                {activeLesson.title}
               </motion.div>
             </div>
           )}
@@ -332,7 +332,7 @@ export const FractionsLearningModule: React.FC<FractionsLearningModuleProps> = (
       <div className="mt-8 text-center text-gray-500">
         <p>
           Lesson {currentLessonIndex + 1} of {lessons.length} | 
-          Step {currentStepIndex + 1} of {currentLesson.steps.length}
+          Step {currentStepIndex + 1} of {activeLesson.steps.length}
         </p>
       </div>
     </div>
