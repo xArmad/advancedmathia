@@ -1,0 +1,178 @@
+[
+  {
+    "id": "introduction",
+    "topic": "introduction",
+    "displayName": "Introduction to Fractions",
+    "title": "Introduction to Fractions",
+    "description": "Learn what fractions are and how they represent parts of a whole.",
+    "orderNumber": 1,
+    "recommendedOrder": 1,
+    "prerequisites": [],
+    "reviewInterval": 2,
+    "mastery": {
+      "easy": 5,
+      "medium": 3,
+      "hard": 1
+    }
+  },
+  {
+    "id": "representation",
+    "topic": "representation",
+    "title": "Representing Fractions",
+    "displayName": "Representing Fractions",
+    "description": "Explore different ways to represent fractions visually.",
+    "orderNumber": 2,
+    "recommendedOrder": 2,
+    "prerequisites": ["introduction"],
+    "reviewInterval": 2,
+    "mastery": {
+      "easy": 4,
+      "medium": 3,
+      "hard": 1
+    }
+  },
+  {
+    "id": "equivalent_fractions",
+    "topic": "equivalent_fractions",
+    "title": "Equivalent Fractions",
+    "displayName": "Equivalent Fractions",
+    "description": "Discover how different fractions can represent the same value.",
+    "orderNumber": 3,
+    "recommendedOrder": 3,
+    "prerequisites": ["introduction", "representation"],
+    "reviewInterval": 3,
+    "mastery": {
+      "easy": 5,
+      "medium": 4,
+      "hard": 2
+    }
+  },
+  {
+    "id": "simplification",
+    "topic": "simplification",
+    "title": "Simplifying Fractions",
+    "displayName": "Simplifying Fractions",
+    "description": "Learn how to simplify fractions to their lowest terms.",
+    "orderNumber": 4,
+    "recommendedOrder": 4,
+    "prerequisites": ["equivalent_fractions"],
+    "reviewInterval": 3,
+    "mastery": {
+      "easy": 5,
+      "medium": 4,
+      "hard": 2
+    }
+  },
+  {
+    "id": "comparison",
+    "topic": "comparison",
+    "title": "Comparing Fractions",
+    "displayName": "Comparing Fractions",
+    "description": "Learn how to determine which fraction is larger or smaller.",
+    "orderNumber": 5,
+    "recommendedOrder": 5,
+    "prerequisites": ["equivalent_fractions"],
+    "reviewInterval": 3,
+    "mastery": {
+      "easy": 5,
+      "medium": 3,
+      "hard": 2
+    }
+  },
+  {
+    "id": "addition",
+    "topic": "addition",
+    "title": "Adding Fractions",
+    "displayName": "Adding Fractions",
+    "description": "Learn how to add fractions with the same and different denominators.",
+    "orderNumber": 6,
+    "recommendedOrder": 6,
+    "prerequisites": ["equivalent_fractions", "simplification"],
+    "reviewInterval": 4,
+    "mastery": {
+      "easy": 6,
+      "medium": 4,
+      "hard": 2
+    }
+  },
+  {
+    "id": "subtraction",
+    "topic": "subtraction",
+    "title": "Subtracting Fractions",
+    "displayName": "Subtracting Fractions",
+    "description": "Learn how to subtract fractions with the same and different denominators.",
+    "orderNumber": 7,
+    "recommendedOrder": 7,
+    "prerequisites": ["addition"],
+    "reviewInterval": 4,
+    "mastery": {
+      "easy": 6,
+      "medium": 4,
+      "hard": 2
+    }
+  },
+  {
+    "id": "multiplication",
+    "topic": "multiplication",
+    "title": "Multiplying Fractions",
+    "displayName": "Multiplying Fractions",
+    "description": "Discover how to multiply fractions together.",
+    "orderNumber": 8,
+    "recommendedOrder": 8,
+    "prerequisites": ["simplification"],
+    "reviewInterval": 5,
+    "mastery": {
+      "easy": 6,
+      "medium": 4,
+      "hard": 2
+    }
+  },
+  {
+    "id": "division",
+    "topic": "division",
+    "title": "Dividing Fractions",
+    "displayName": "Dividing Fractions",
+    "description": "Learn how to divide one fraction by another.",
+    "orderNumber": 9,
+    "recommendedOrder": 9,
+    "prerequisites": ["multiplication"],
+    "reviewInterval": 5,
+    "mastery": {
+      "easy": 7,
+      "medium": 5,
+      "hard": 3
+    }
+  },
+  {
+    "id": "mixed_numbers",
+    "topic": "mixed_numbers",
+    "title": "Mixed Numbers",
+    "displayName": "Mixed Numbers",
+    "description": "Learn about numbers that are a combination of a whole number and a fraction.",
+    "orderNumber": 10,
+    "recommendedOrder": 10,
+    "prerequisites": ["addition", "subtraction"],
+    "reviewInterval": 4,
+    "mastery": {
+      "easy": 5,
+      "medium": 4,
+      "hard": 2
+    }
+  },
+  {
+    "id": "decimals",
+    "topic": "decimals",
+    "title": "Fractions and Decimals",
+    "displayName": "Fractions and Decimals",
+    "description": "Explore the relationship between fractions and decimals.",
+    "orderNumber": 11,
+    "recommendedOrder": 11,
+    "prerequisites": ["division"],
+    "reviewInterval": 4,
+    "mastery": {
+      "easy": 5,
+      "medium": 4,
+      "hard": 2
+    }
+  }
+] 

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "intro_mc_1",
+    "topic": "introduction",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "question": "What does the bottom number (denominator) in a fraction tell us?",
+    "explanation": "The denominator (bottom number) tells us how many equal parts the whole is divided into.",
+    "hints": [
+      "Think about when we slice a pizza into 8 slices...",
+      "The denominator represents the total number of equal parts."
+    ],
+    "choices": [
+      "How many parts we're taking",
+      "How many equal parts the whole is divided into",
+      "The size of each part",
+      "The total value of the fraction"
+    ],
+    "correctChoiceIndex": 1
+  },
+  {
+    "id": "intro_mc_2",
+    "topic": "introduction",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "question": "What does the top number (numerator) in a fraction tell us?",
+    "explanation": "The numerator (top number) tells us how many parts we are considering or taking.",
+    "hints": [
+      "If you take 3 slices from a pizza cut into 8 slices...",
+      "The numerator represents the number of parts we're talking about."
+    ],
+    "choices": [
+      "How many parts we're taking",
+      "How many equal parts the whole is divided into",
+      "The size of each part",
+      "The total value of the fraction"
+    ],
+    "correctChoiceIndex": 0
+  },
+  {
+    "id": "intro_shape_1",
+    "topic": "introduction",
+    "type": "interactive_shape",
+    "difficulty": "easy",
+    "question": "Select the parts that represent 3/5 of the whole.",
+    "explanation": "3/5 means 3 parts out of a total of 5 equal parts.",
+    "hints": [
+      "Count the total number of parts first",
+      "Then select the correct number of parts (3)"
+    ],
+    "fractions": [
+      {
+        "numerator": 3,
+        "denominator": 5
+      }
+    ],
+    "totalParts": 5,
+    "correctParts": [0, 1, 2],
+    "visualAids": {
+      "type": "rectangle",
+      "interactive": true,
+      "colors": {
+        "primary": "#06D6A0",
+        "secondary": "#EF476F"
+      }
+    }
+  },
+  {
+    "id": "intro_shape_2",
+    "topic": "introduction",
+    "type": "interactive_shape",
+    "difficulty": "easy",
+    "question": "Select the parts that represent 2/4 of the whole.",
+    "explanation": "2/4 means 2 parts out of a total of 4 equal parts.",
+    "hints": [
+      "The circle is divided into 4 equal parts",
+      "You need to select 2 of those parts"
+    ],
+    "fractions": [
+      {
+        "numerator": 2,
+        "denominator": 4
+      }
+    ],
+    "totalParts": 4,
+    "correctParts": [0, 1],
+    "visualAids": {
+      "type": "circle",
+      "interactive": true,
+      "colors": {
+        "primary": "#118AB2",
+        "secondary": "#FFD166"
+      }
+    }
+  },
+  {
+    "id": "intro_tf_1",
+    "topic": "introduction",
+    "type": "true_false",
+    "difficulty": "easy",
+    "question": "In the fraction 3/7, the denominator is 3.",
+    "explanation": "The denominator is the bottom number in a fraction, which in 3/7 is 7. The top number (3) is the numerator.",
+    "hints": [
+      "Remember: numerator is on top, denominator is on the bottom",
+      "Denominator comes from 'denominate' which means to name"
+    ],
+    "statement": "In the fraction 3/7, the denominator is 3.",
+    "isTrue": false
+  },
+  {
+    "id": "intro_fill_1",
+    "topic": "introduction",
+    "difficulty": "medium",
+    "type": "fill_in_blank",
+    "question": "In a fraction, the _____ tells us how many equal parts the whole is divided into, while the _____ tells us how many parts we're talking about.",
+    "explanation": "The denominator (bottom number) tells us how many equal parts the whole is divided into, while the numerator (top number) tells us how many parts we're talking about.",
+    "hints": [
+      "Think about which number is on top and which is on the bottom",
+      "The denominator gives the fraction its 'name' (like thirds, fourths, etc.)"
+    ],
+    "blanks": [
+      {
+        "id": "blank1",
+        "correctValue": "denominator"
+      },
+      {
+        "id": "blank2",
+        "correctValue": "numerator"
+      }
+    ]
+  }
+] 

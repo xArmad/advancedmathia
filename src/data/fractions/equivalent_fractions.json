@@ -1,0 +1,134 @@
+[
+  {
+    "id": "equiv_mc_1",
+    "topic": "equivalent_fractions",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "question": "Which fraction is equivalent to 1/2?",
+    "explanation": "Equivalent fractions represent the same value even though they use different numbers. You can find equivalent fractions by multiplying both the numerator and denominator by the same non-zero number.",
+    "hints": [
+      "To find equivalent fractions, multiply both the top and bottom by the same number",
+      "Try multiplying both the numerator and denominator of 1/2 by 2, 3, etc."
+    ],
+    "choices": [
+      "1/4",
+      "2/4",
+      "3/4",
+      "4/8"
+    ],
+    "correctChoiceIndex": 1
+  },
+  {
+    "id": "equiv_match_1",
+    "topic": "equivalent_fractions",
+    "type": "match_equivalents",
+    "difficulty": "medium",
+    "question": "Match each fraction on the left with its equivalent fraction on the right.",
+    "explanation": "Equivalent fractions represent the same portion of a whole, even though they use different numbers.",
+    "hints": [
+      "Convert each fraction to a decimal to compare them",
+      "Or find a common denominator to compare"
+    ],
+    "pairs": [
+      {
+        "left": { "numerator": 1, "denominator": 2 },
+        "right": { "numerator": 3, "denominator": 6 }
+      },
+      {
+        "left": { "numerator": 2, "denominator": 3 },
+        "right": { "numerator": 8, "denominator": 12 }
+      },
+      {
+        "left": { "numerator": 3, "denominator": 4 },
+        "right": { "numerator": 9, "denominator": 12 }
+      },
+      {
+        "left": { "numerator": 1, "denominator": 5 },
+        "right": { "numerator": 2, "denominator": 10 }
+      }
+    ]
+  },
+  {
+    "id": "equiv_shape_1",
+    "topic": "equivalent_fractions",
+    "type": "interactive_shape",
+    "difficulty": "medium",
+    "question": "Select parts that show 2/3 and 4/6 are equivalent.",
+    "explanation": "2/3 and 4/6 are equivalent because they represent the same portion of a whole.",
+    "hints": [
+      "Look at how much of each shape is colored",
+      "Compare the proportion rather than the number of parts"
+    ],
+    "fractions": [
+      {
+        "numerator": 2,
+        "denominator": 3
+      },
+      {
+        "numerator": 4,
+        "denominator": 6
+      }
+    ],
+    "totalParts": 6,
+    "correctParts": [0, 1, 2, 3],
+    "visualAids": {
+      "type": "rectangle",
+      "interactive": true,
+      "colors": {
+        "primary": "#118AB2",
+        "secondary": "#FFD166"
+      }
+    }
+  },
+  {
+    "id": "equiv_fill_1",
+    "topic": "equivalent_fractions",
+    "type": "fill_in_blank",
+    "difficulty": "medium",
+    "question": "The fraction 3/4 is equivalent to ?/8.",
+    "explanation": "To find an equivalent fraction, multiply both the numerator and denominator by the same number. To go from 4 to 8 in the denominator, we multiply by 2. So we also multiply the numerator by 2: 3 × 2 = 6. Thus, 3/4 = 6/8.",
+    "hints": [
+      "What do you multiply 4 by to get 8?",
+      "Whatever you multiply the denominator by, you must do the same to the numerator"
+    ],
+    "blanks": [
+      {
+        "id": "blank1",
+        "correctValue": 6
+      }
+    ]
+  },
+  {
+    "id": "equiv_tf_1",
+    "topic": "equivalent_fractions",
+    "type": "true_false",
+    "difficulty": "easy",
+    "question": "The fractions 2/5 and 4/10 are equivalent.",
+    "explanation": "2/5 and 4/10 are equivalent because 2/5 × 2/2 = 4/10. You can multiply both the numerator and denominator of 2/5 by 2 to get 4/10.",
+    "hints": [
+      "Try converting both to decimals",
+      "Or see if you can convert one into the other by multiplying by the same value"
+    ],
+    "statement": "The fractions 2/5 and 4/10 are equivalent.",
+    "isTrue": true
+  },
+  {
+    "id": "equiv_order_1",
+    "topic": "equivalent_fractions",
+    "type": "ordering",
+    "difficulty": "hard",
+    "question": "Arrange these fractions from smallest to largest.",
+    "explanation": "To compare fractions, we need to find a common denominator or convert them to decimals.",
+    "hints": [
+      "Try converting all to the same denominator",
+      "Or convert each to a decimal and compare"
+    ],
+    "fractions": [
+      {"numerator": 2, "denominator": 3},
+      {"numerator": 3, "denominator": 4},
+      {"numerator": 5, "denominator": 6},
+      {"numerator": 7, "denominator": 12}
+    ],
+    "correctOrder": [3, 0, 1, 2]
+  }
+] 
