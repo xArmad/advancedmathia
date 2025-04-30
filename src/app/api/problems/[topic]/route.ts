@@ -1,19 +1,19 @@
 import { readFileSync } from 'fs';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 import { FractionTopic } from '@/types/problemTemplates';
 import path from 'path';
 
 export async function GET(
   request: NextRequest,
-  context: { params: { topic: string } }
+  { params }: { params: { topic: string } }
 ) {
   try {
     // Extract the topic from params
-    const topic = context.params?.topic;
+    const topic = params.topic;
     
     // Check if topic exists
     if (!topic) {
-      return NextResponse.json(
+      return Response.json(
         { error: 'Topic is required' },
         { status: 400 }
       );
@@ -35,7 +35,7 @@ export async function GET(
     ];
     
     if (!validTopics.includes(topic as FractionTopic)) {
-      return NextResponse.json(
+      return Response.json(
         { error: `Invalid topic: ${topic}` },
         { status: 400 }
       );
@@ -49,15 +49,15 @@ export async function GET(
       const data = readFileSync(filePath, 'utf8');
       const problems = JSON.parse(data);
       
-      return NextResponse.json(problems);
+      return Response.json(problems);
     } catch (fileError) {
       console.error(`File error for topic ${topic}:`, fileError);
       // If file doesn't exist yet, return empty array
-      return NextResponse.json([]);
+      return Response.json([]);
     }
   } catch (error) {
     console.error('Error loading problems:', error);
-    return NextResponse.json(
+    return Response.json(
       { error: 'Failed to load problems' },
       { status: 500 }
     );

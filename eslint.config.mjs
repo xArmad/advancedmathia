@@ -10,9 +10,18 @@ const compat = new FlatCompat({
   recommendedConfig: true
 });
 
+/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
     ignores: ["**/node_modules/**", ".next/**", "dist/**"]
   },
-  ...compat.extends("next/core-web-vitals")
+  ...compat.extends("next/core-web-vitals"),
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parserOptions: {
+        project: "./tsconfig.json"
+      }
+    }
+  }
 ];
