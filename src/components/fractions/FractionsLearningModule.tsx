@@ -200,10 +200,22 @@ const lessons: Lesson[] = [
   },
 ];
 
-const FractionsLearningModule: React.FC = () => {
+interface FractionsLearningModuleProps {
+  onAnswerSubmit: (answer: FractionType | boolean, isCorrect: boolean) => void;
+  currentQuestion: Question;
+  showingLesson: boolean;
+  currentLesson: LessonType | null;
+}
+
+export const FractionsLearningModule: React.FC<FractionsLearningModuleProps> = ({
+  onAnswerSubmit,
+  currentQuestion,
+  showingLesson,
+  currentLesson
+}) => {
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  const [userAnswer, setUserAnswer] = useState<any>(null);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
   
   const currentLesson = lessons[currentLessonIndex];
   const currentStep = currentLesson.steps[currentStepIndex];
@@ -211,22 +223,18 @@ const FractionsLearningModule: React.FC = () => {
   const handleNext = () => {
     if (currentStepIndex < currentLesson.steps.length - 1) {
       setCurrentStepIndex(currentStepIndex + 1);
-      setUserAnswer(null);
     } else if (currentLessonIndex < lessons.length - 1) {
       setCurrentLessonIndex(currentLessonIndex + 1);
       setCurrentStepIndex(0);
-      setUserAnswer(null);
     }
   };
   
   const handlePrevious = () => {
     if (currentStepIndex > 0) {
       setCurrentStepIndex(currentStepIndex - 1);
-      setUserAnswer(null);
     } else if (currentLessonIndex > 0) {
       setCurrentLessonIndex(currentLessonIndex - 1);
       setCurrentStepIndex(lessons[currentLessonIndex - 1].steps.length - 1);
-      setUserAnswer(null);
     }
   };
   

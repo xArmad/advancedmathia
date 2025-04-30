@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import { NextRequest, NextResponse } from 'next/server';
 import path from 'path';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Determine the path to the JSON file
     const filePath = path.join(process.cwd(), 'src', 'data', 'fractions', 'topics_config.json');

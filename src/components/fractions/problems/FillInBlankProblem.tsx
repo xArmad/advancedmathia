@@ -51,8 +51,8 @@ const FillInBlankProblem: React.FC<FillInBlankProblemProps> = ({ problem, onSubm
 
   // Replace blanks with input fields
   const renderQuestion = () => {
-    let questionParts = problem.question.split('_____');
-    let result = [];
+    const questionParts = problem.question.split('_____');
+    const result = [];
     
     for (let i = 0; i < questionParts.length; i++) {
       result.push(<span key={`text-${i}`}>{questionParts[i]}</span>);

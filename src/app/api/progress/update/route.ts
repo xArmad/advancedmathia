@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     // Get existing progress from cookies
     const cookieStore = cookies();
     const progressCookie = cookieStore.get('fractionProgress');
-    let progress = progressCookie ? JSON.parse(progressCookie.value) : {};
+    const progress = progressCookie ? JSON.parse(progressCookie.value) : {};
     
     // Initialize topic progress if it doesn't exist yet
     if (!progress[topic]) {

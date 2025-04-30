@@ -9,15 +9,19 @@ import useAdaptiveQuestions from '@/hooks/useAdaptiveQuestions';
 import useInteractiveLessons from '@/hooks/useInteractiveLessons';
 import { FractionType, OperationType, LessonType } from '@/types';
 import Confetti from 'react-confetti';
+import { FractionOperation } from '../../types';
 
-const FractionLearningApp: React.FC = () => {
+interface FractionLearningAppProps {
+  // ... existing code ...
+}
+
+const FractionLearningApp: React.FC<FractionLearningAppProps> = () => {
   const { progress, recordAttempt, incrementStreak, resetStreak, addMasteredConcept, addStrugglingConcept } = useStudentProgress();
   const { currentQuestion, generateNewQuestion } = useAdaptiveQuestions();
   const { getLessonForStrugglingConcept } = useInteractiveLessons();
   
   const [showingLesson, setShowingLesson] = useState<boolean>(false);
   const [currentLesson, setCurrentLesson] = useState<LessonType | null>(null);
-  const [streak, setStreak] = useState<number>(0);
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
   const [windowSize, setWindowSize] = useState<{ width: number; height: number }>({
     width: typeof window !== 'undefined' ? window.innerWidth : 0,
@@ -56,11 +60,6 @@ const FractionLearningApp: React.FC = () => {
     progress.masteredConcepts,
     showingLesson
   ]);
-
-  // Sync local streak state with context streak state
-  useEffect(() => {
-    setStreak(progress.streak);
-  }, [progress.streak]);
 
   const handleAnswerSubmit = useCallback((answer: FractionType | boolean, isCorrect: boolean) => {
     // Record the attempt in the progress context

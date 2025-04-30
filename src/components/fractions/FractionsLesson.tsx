@@ -8,7 +8,7 @@ const lessonSteps = [
   {
     id: 1,
     title: "Introduction to Fractions",
-    message: "Hi! I'm your fraction buddy! Today we're going to learn about fractions. Fractions help us describe parts of a whole.",
+    message: "Hi! I&apos;m your fraction buddy! Today we&apos;re going to learn about fractions. Fractions help us describe parts of a whole.",
     emotion: "happy",
     numerator: 0,
     denominator: 1,
@@ -26,7 +26,7 @@ const lessonSteps = [
   {
     id: 3,
     title: "The Denominator",
-    message: "Let's look at this circle split into 4 equal parts. The denominator is 4, which means our whole is divided into 4 pieces.",
+    message: "Let&apos;s look at this circle split into 4 equal parts. The denominator is 4, which means our whole is divided into 4 pieces.",
     emotion: "pointing",
     numerator: 0,
     denominator: 4,
@@ -35,7 +35,7 @@ const lessonSteps = [
   {
     id: 4,
     title: "The Numerator",
-    message: "The numerator tells us how many parts we're talking about. If I select 1 part, we get the fraction 1/4 (one-fourth).",
+    message: "The numerator tells us how many parts we&apos;re talking about. If I select 1 part, we get the fraction 1/4 (one-fourth).",
     emotion: "teaching",
     numerator: 1,
     denominator: 4,
@@ -54,7 +54,7 @@ const lessonSteps = [
   {
     id: 6,
     title: "Your Turn!",
-    message: "Now it's your turn! Click on the circle to select parts and create your own fraction.",
+    message: "Now it&apos;s your turn! Click on the circle to select parts and create your own fraction.",
     emotion: "encouraging",
     numerator: 0,
     denominator: 6,
@@ -64,7 +64,7 @@ const lessonSteps = [
   {
     id: 7,
     title: "Different Denominators",
-    message: "We can divide our whole into any number of parts. Here's a circle divided into 8 equal parts.",
+    message: "We can divide our whole into any number of parts. Here&apos;s a circle divided into 8 equal parts.",
     emotion: "teaching",
     numerator: 0,
     denominator: 8,
@@ -219,7 +219,7 @@ const FractionsLesson: React.FC = () => {
                   </p>
                   {userNumerator > 0 && (
                     <p className="text-gray-600">
-                      You've selected {userNumerator} out of {step.denominator} parts
+                      You&apos;ve selected {userNumerator} out of {step.denominator} parts
                     </p>
                   )}
                 </div>
