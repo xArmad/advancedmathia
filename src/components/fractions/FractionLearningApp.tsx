@@ -9,7 +9,6 @@ import useAdaptiveQuestions from '@/hooks/useAdaptiveQuestions';
 import useInteractiveLessons from '@/hooks/useInteractiveLessons';
 import { FractionType, OperationType, LessonType } from '@/types';
 import Confetti from 'react-confetti';
-import { FractionOperation } from '../../types';
 
 interface FractionLearningAppProps {
   // ... existing code ...
