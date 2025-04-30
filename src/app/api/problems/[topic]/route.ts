@@ -3,20 +3,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { FractionTopic } from '@/types/problemTemplates';
 import path from 'path';
 
-// Define the types for params structure
-type RouteParams = {
-  params: {
-    topic: string
-  }
-}
-
 export async function GET(
   request: NextRequest,
-  { params }: RouteParams
+  context: { params: { topic: string } }
 ) {
   try {
     // Extract the topic from params
-    const topic = params?.topic;
+    const topic = context.params?.topic;
     
     // Check if topic exists
     if (!topic) {
